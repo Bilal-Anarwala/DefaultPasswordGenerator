@@ -1,2 +1,4 @@
 # DefaultPasswordGenerator
-Random default password generator for initial IT device setup that is secure.
+During my previous work experience, I often received a randomly generated default password for my laptop during the initial setup and login. These passwords were always an arbitrary mix of words, like "FightingIsland!8," which piqued my curiosity about how they were generated. This inspired me to create my own password generator using Python.
+
+My password generator selects two random words from a text file containing the entire English dictionary, adds a random special character from a predefined list, and appends a randomly generated number between 0 and 9. To ensure the password’s security, it cross-references the generated password with the rockyou.txt file—a known list of compromised passwords. If the password matches one on the list, the function generates a new one and repeats the process until a secure password is found. Once a secure password is generated, it is saved to a file called "Passwords.txt" and displayed to the user.
